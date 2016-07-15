@@ -1,0 +1,43 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:documentation.build.start,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "model:documentation.build.start,name:"
+msgid "Build Documentation Start"
+msgstr "Inicio Generar documentación"
+
+msgctxt "model:ir.action,name:act_open_documentation"
+msgid "Open Documentation"
+msgstr "Abrir documentación"
+
+msgctxt "model:ir.action,name:wizard_build_documentation"
+msgid "Build Documentation"
+msgstr "Generar documentación"
+
+msgctxt "model:ir.action,name:wizard_open_documentation"
+msgid "Open Documentation"
+msgstr "Abrir documentación"
+
+msgctxt "model:ir.ui.menu,name:menu_build_documentation"
+msgid "Build Documentation"
+msgstr "Generar documentación"
+
+msgctxt "model:ir.ui.menu,name:menu_open_documentation"
+msgid "Open Documentation"
+msgstr "Abrir documentación"
+
+msgctxt "view:documentation.build.start:"
+msgid "Build Documentation?"
+msgstr "Generar documentación?"
+
+msgctxt "wizard_button:documentation.build,start,build:"
+msgid "Build"
+msgstr "Generar"
+
+msgctxt "wizard_button:documentation.build,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"

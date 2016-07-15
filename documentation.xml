@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="build_start_view_form">
+            <field name="model">documentation.build.start</field>
+            <field name="type">form</field>
+            <field name="name">build_start_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_build_documentation">
+            <field name="name">Build Documentation</field>
+            <field name="wiz_name">documentation.build</field>
+        </record>
+        <menuitem parent="ir.menu_administration"
+            action="wizard_build_documentation"
+            sequence="1000"
+            id="menu_build_documentation"/>
+        <record model="ir.action.wizard" id="wizard_open_documentation">
+            <field name="name">Open Documentation</field>
+            <field name="wiz_name">documentation.open</field>
+        </record>
+        <record model="ir.action.url" id="act_open_documentation">
+            <field name="name">Open Documentation</field>
+            <field name="url">fake_url</field>
+        </record>
+        <menuitem action="wizard_open_documentation" icon="tryton-find"
+            sequence="500" id="menu_open_documentation"/>
+
+    </data>
+</tryton>
