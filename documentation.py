@@ -103,7 +103,6 @@ class BuildDocumentation(Wizard):
         config_file = os.path.join(build_folder, 'conf.py')
         with open(config_file, 'w') as f:
             f.write(template.render(**cls.get_config_template_context()))
-        print config_file
 
     @classmethod
     def get_config_template_context(cls):
