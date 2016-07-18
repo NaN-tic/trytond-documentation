@@ -119,18 +119,11 @@ class BuildDocumentation(Wizard):
     @classmethod
     def fill_build_content(cls):
         modules = os.path.join(os.path.dirname(__file__), '..')
-        cls.remove_symlinks()
         cls.create_symlinks(trytond_doc_path)
         cls.create_symlinks(modules)
         index = os.path.join(trytond_doc_path, 'index.rst')
         link = os.path.join(build_folder, 'index.rst')
         cls.make_link(index, link)
-
-    @classmethod
-    def remove_symlinks(cls):
-        for link_file in path(build_folder).listdir():
-            if link_file.islink():
-                link_file.remove()
 
     @classmethod
     def create_symlinks(cls, origin):
