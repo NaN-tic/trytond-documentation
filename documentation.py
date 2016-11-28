@@ -28,7 +28,7 @@ trytond_doc_url = config.get('documentation', 'trytond_doc_url',
 config_template = config.get('documentation', 'config_template',
     default=os.path.join(os.path.dirname(__file__), 'conf.py.jinja'))
 build_lang = config.get('documentation', 'lang', default='es')
-build_folder = config.get('documentation', 'root',
+build_folder = config.get('documentation', 'build_folder',
     default=tempfile.mkdtemp())
 output_root = config.get('documentation', 'root',
     default=config.get('web', 'root'))
