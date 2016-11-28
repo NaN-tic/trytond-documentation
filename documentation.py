@@ -92,7 +92,7 @@ class BuildDocumentation(Wizard):
     def get_documentation_modules(cls):
         pool = Pool()
         Module = pool.get('ir.module')
-        modules = Module.search([('state', '=', 'installed')])
+        modules = Module.search([('state', '=', 'activated')])
         graph = create_graph([module.name for module in modules])[0]
         return [m.name for m in graph]
 
