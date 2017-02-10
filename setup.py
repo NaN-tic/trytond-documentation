@@ -43,8 +43,8 @@ minor_version = int(minor_version)
 name = 'trytonspain_documentation'
 download_url = 'https://bitbucket.org/trytonspain/trytond-documentation'
 
-requires = ['hgapi', 'Sphinx >= 1.4.0', 'trydoc >= 0.12',
-    'sphinxcontrib-inheritance >= 0.8', 'jinja2']
+requires = ['hgapi', 'Sphinx', 'trydoc >= 0.13',
+    'sphinxcontrib-inheritance >= 0.9', 'jinja2', 'path.py>=10']
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res)(\W|$)', dep):
         prefix = MODULE2PREFIX.get(dep, 'trytond')

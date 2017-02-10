@@ -3,7 +3,7 @@
 import os
 import glob
 import tempfile
-from path import path
+from path import Path
 try:
     from configparser import ConfigParser
 except ImportError:
@@ -128,17 +128,17 @@ class BuildDocumentation(Wizard):
     @classmethod
     def create_symlinks(cls, origin):
         for module_doc_dir in glob.glob('%s/*/doc/%s' % (origin, build_lang)):
-            module_name = str(path(module_doc_dir).parent.parent.basename())
-            symlink = path(build_folder).joinpath(module_name)
+            module_name = str(Path(module_doc_dir).parent.parent.basename())
+            symlink = Path(build_folder).joinpath(module_name)
             if not symlink.exists():
-                path(build_folder).relpathto(
-                    path(module_doc_dir)).symlink(symlink)
+                Path(build_folder).relpathto(
+                    Path(module_doc_dir)).symlink(symlink)
 
     @classmethod
     def make_link(cls, origin, destination):
         directory = os.path.dirname(destination)
         if not os.path.exists(destination):
-            path(directory).relpathto(path(origin)).symlink(destination)
+            Path(directory).relpathto(Path(origin)).symlink(destination)
 
     @classmethod
     def make_doc(cls):
